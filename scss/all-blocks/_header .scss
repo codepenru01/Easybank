@@ -1,0 +1,146 @@
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background-color: #ffffff;
+    z-index: 1;
+}
+.header__homburger {
+    display: none
+}
+
+.homburger-img {
+    background-color: transparent;
+}
+
+.header__inner {
+    padding-top: 18px;
+    padding-bottom: 18px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 14px;
+    line-height: 16px;
+    letter-spacing: -0.107692px;
+}
+
+
+.nav {
+    &__list {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        align-items: center;
+    }
+    
+    &__item + &__item {
+        margin-left: 30px;
+    }
+    
+    &__link {
+        color: #9597A5;
+        text-decoration: none;
+    }
+}
+
+.nav__link:hover {
+    padding-bottom: 27px;
+    color: #2D314D;
+    border-bottom: solid 3px rgb(3, 214, 108);
+} 
+
+
+.hader__labal {
+    display: none;
+    cursor: pointer;
+}
+
+.modal {
+    padding: 52px 0;
+    max-width: 627px;
+    display: none;
+    position: absolute;
+    top: 80px;
+    left: 0;
+    right: 0;
+    margin: auto;
+    background: #FFFFFF;
+    box-shadow: 0px 0px 150px 200px rgba(0, 0, 0, 0.286);
+    transition: all 1s ease;
+    border-radius: 4px;
+    
+}
+
+.modal__list {
+    text-align: center;
+    list-style-type: none;
+}
+
+.modal__items+.modal__items {
+    margin-top: 24px;
+}
+
+.modal__link {
+    text-decoration: none;
+    padding-bottom: 5px;
+    font-size: 18px;
+    line-height: 21px;
+    text-align: center;
+    letter-spacing: -0.138462px;
+    color: #2D314D;
+}
+
+.modal__link:hover {
+    border-bottom: 2px #2D314D solid;
+}
+
+.header__controller:checked~.modal {
+    display: block;
+}
+.hampurger-button2{
+    display: none;
+}
+.header__controller:checked ~ .hampurger-button {
+    display: none;
+}
+.header__controller:checked ~ .hampurger-button2 {
+    display: block;
+}
+
+
+@media only screen and ( max-width: 750px) {
+    .header__homburger {
+        display: inline;
+    }
+    
+    .header__nav {
+        display: none;
+    }
+    .hader__labal {
+        display: block;
+    }
+    
+    .header__invite-button {
+        display: none;
+    }
+}
+@media only screen and (max-width:650px) {
+    .modal {
+        max-width: 500px;
+    }
+}
+
+@media only screen and (max-width:525px) {
+    .modal {
+        max-width: 400px;
+    }
+}
+
+@media only screen and (max-width:444px) {
+    .modal {
+        padding: 32px 0;
+        max-width: 327px;
+    }
+}
